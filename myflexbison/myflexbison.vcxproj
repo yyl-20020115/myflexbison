@@ -165,6 +165,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="1.txt" />
+    <Text Include="Makefile" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="calc.flex.cpp" />

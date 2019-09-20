@@ -18,6 +18,7 @@
     <Text Include="1.txt">
       <Filter>资源文件</Filter>
     </Text>
+    <Text Include="Makefile" />
   </ItemGroup>
   <ItemGroup>
     <Flex Include="calc.l" />

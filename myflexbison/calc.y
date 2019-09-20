@@ -25,7 +25,6 @@ calclist:
 exp: factor { $$ = $1; }
     | exp ADD factor { $$ = $1 + $3 ; }
     | exp SUB factor { $$ = $1 - $3 ; }
-	| QUIT EOL { exit(0); }
     ;
 factor: tmp { $$ =$1; }
     | factor MUL tmp { $$ = $1 * $3; }
@@ -40,6 +39,7 @@ term: NUMBER { $$ = $1;}
     | ABS exp ABS { $$ = fabs($2);}
     | OP exp CP { $$ = $2; }
     | SQRT OP exp CP { $$ = sqrt($3) ;/*printf(" %d %d %d\n",$1,$2,$3);*/ }
+	| QUIT EOL { exit(0); }
     ;
 
 %%
