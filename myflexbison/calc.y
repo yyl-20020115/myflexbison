@@ -1,8 +1,11 @@
 /* calc1-2.y*/
 %{
 #define YYSTYPE double
-#include<stdio.h>
-#include<math.h>
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+#include <math.h>
+
 extern int yylex (void);
 extern int yywrap ( void );
 
@@ -39,7 +42,7 @@ term: NUMBER { $$ = $1;}
     | ABS exp ABS { $$ = fabs($2);}
     | OP exp CP { $$ = $2; }
     | SQRT OP exp CP { $$ = sqrt($3) ;/*printf(" %d %d %d\n",$1,$2,$3);*/ }
-	| QUIT EOL { exit(0); }
+    | QUIT EOL { exit(0); }
     ;
 
 %%

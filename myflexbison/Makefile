@@ -2,7 +2,7 @@ cc=gcc
 calc:calc.y calc.l
 	bison -d calc.y
 	flex -o calc.lex.c calc.l
-	cc -o $@ calc.tab.c calc.lex.c -lfl
+	cc -o $@ calc.tab.c calc.lex.c -lfl -lm
 
 calc.lex: calc.y calc.l
 	bison -d calc.y
