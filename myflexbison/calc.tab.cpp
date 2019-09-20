@@ -69,14 +69,16 @@
 #line 2 "calc.y"
 
 #define YYSTYPE double
-#include<stdio.h>
-#include<math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
 extern int yylex (void);
 extern int yywrap ( void );
 
 int yyerror(const char *s);
 
-#line 80 "calc.tab.cpp"
+#line 82 "calc.tab.cpp"
 
 # ifndef YY_NULLPTR
 #  if defined __cplusplus
@@ -435,8 +437,8 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    21,    21,    22,    25,    26,    27,    29,    30,    31,
-      33,    34,    35,    38,    39,    40,    41,    42
+       0,    23,    23,    24,    27,    28,    29,    31,    32,    33,
+      35,    36,    37,    40,    41,    42,    43,    44
 };
 #endif
 
@@ -1231,97 +1233,97 @@ yyreduce:
   switch (yyn)
     {
   case 3:
-#line 22 "calc.y"
+#line 24 "calc.y"
     { printf("ans = %f\n>>> " ,yyvsp[-1] );  }
-#line 1237 "calc.tab.cpp"
+#line 1239 "calc.tab.cpp"
     break;
 
   case 4:
-#line 25 "calc.y"
+#line 27 "calc.y"
     { yyval = yyvsp[0]; }
-#line 1243 "calc.tab.cpp"
+#line 1245 "calc.tab.cpp"
     break;
 
   case 5:
-#line 26 "calc.y"
+#line 28 "calc.y"
     { yyval = yyvsp[-2] + yyvsp[0] ; }
-#line 1249 "calc.tab.cpp"
+#line 1251 "calc.tab.cpp"
     break;
 
   case 6:
-#line 27 "calc.y"
+#line 29 "calc.y"
     { yyval = yyvsp[-2] - yyvsp[0] ; }
-#line 1255 "calc.tab.cpp"
+#line 1257 "calc.tab.cpp"
     break;
 
   case 7:
-#line 29 "calc.y"
+#line 31 "calc.y"
     { yyval =yyvsp[0]; }
-#line 1261 "calc.tab.cpp"
+#line 1263 "calc.tab.cpp"
     break;
 
   case 8:
-#line 30 "calc.y"
+#line 32 "calc.y"
     { yyval = yyvsp[-2] * yyvsp[0]; }
-#line 1267 "calc.tab.cpp"
+#line 1269 "calc.tab.cpp"
     break;
 
   case 9:
-#line 31 "calc.y"
+#line 33 "calc.y"
     { yyval = yyvsp[-2] / yyvsp[0]; }
-#line 1273 "calc.tab.cpp"
+#line 1275 "calc.tab.cpp"
     break;
 
   case 10:
-#line 33 "calc.y"
+#line 35 "calc.y"
     { yyval = yyvsp[0]; }
-#line 1279 "calc.tab.cpp"
+#line 1281 "calc.tab.cpp"
     break;
 
   case 11:
-#line 34 "calc.y"
+#line 36 "calc.y"
     { yyval = -yyvsp[0]; }
-#line 1285 "calc.tab.cpp"
+#line 1287 "calc.tab.cpp"
     break;
 
   case 12:
-#line 35 "calc.y"
+#line 37 "calc.y"
     { yyval = pow(yyvsp[-2],yyvsp[0]);  /*printf("%d %d %d\n",$1,$2,$3);*/}
-#line 1291 "calc.tab.cpp"
+#line 1293 "calc.tab.cpp"
     break;
 
   case 13:
-#line 38 "calc.y"
+#line 40 "calc.y"
     { yyval = yyvsp[0];}
-#line 1297 "calc.tab.cpp"
+#line 1299 "calc.tab.cpp"
     break;
 
   case 14:
-#line 39 "calc.y"
+#line 41 "calc.y"
     { yyval = fabs(yyvsp[-1]);}
-#line 1303 "calc.tab.cpp"
+#line 1305 "calc.tab.cpp"
     break;
 
   case 15:
-#line 40 "calc.y"
+#line 42 "calc.y"
     { yyval = yyvsp[-1]; }
-#line 1309 "calc.tab.cpp"
+#line 1311 "calc.tab.cpp"
     break;
 
   case 16:
-#line 41 "calc.y"
+#line 43 "calc.y"
     { yyval = sqrt(yyvsp[-1]) ;/*printf(" %d %d %d\n",$1,$2,$3);*/ }
-#line 1315 "calc.tab.cpp"
+#line 1317 "calc.tab.cpp"
     break;
 
   case 17:
-#line 42 "calc.y"
+#line 44 "calc.y"
     { exit(0); }
-#line 1321 "calc.tab.cpp"
+#line 1323 "calc.tab.cpp"
     break;
 
 
-#line 1325 "calc.tab.cpp"
+#line 1327 "calc.tab.cpp"
 
       default: break;
     }
@@ -1553,7 +1555,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 45 "calc.y"
+#line 47 "calc.y"
 
  
 int main()
